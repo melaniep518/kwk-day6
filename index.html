@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AFRAME BASICS</title>
+        <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    </head>
+    <body>
+       <a-scene>
+           <a-assets>
+               <!--Images or audio that we will use later in our project-->
+               <img id="frank" src="Black-Rain-Frog.jpg">
+               <img id="apartment" src="apartment.jpg">
+               <a-asset-item id="rubix-obj" src="rubix.obj"></a-asset-item>
+               <a-asset-item id="rubix-mtl" src="rubix.mtl"></a-asset-item>
+           </a-assets>
+           
+            <a-entity>
+                <a-camera>
+                    <a-cursor></a-cursor>
+                </a-camera>
+            </a-entity>
+            
+            <!--Imported obj-->
+            <a-obj-model position="0 1 -5" src="#rubix-obj" mtl="#rubix-mtl" scale="2 0.5 2"></a-obj-model>
+           
+           <!--<a-box color="tomato" depth="2" height="4" width="2" position="0 1 -5" rotation="0 45 0"></a-box>-->
+           <a-sky radius="20"  material="src:#apartment"></a-sky>
+       </a-scene> 
+    </body>
+</html>
